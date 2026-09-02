@@ -188,6 +188,7 @@
       font-weight: 500;
       color: var(--text);
       text-decoration: none;
+      padding-top: 8px;
     }
 
     .nav-center {
@@ -413,10 +414,10 @@
     }
 
     .hero-line {
-      font-family: volina, sans-serif;
+      font-family: migra, sans-serif;
       font-size: clamp(60px, 12vw, 180px);
       font-weight: 400;
-      line-height: 1;
+      line-height: 0.9;
       letter-spacing: 0;
       text-transform: none;
       color: var(--text);
@@ -429,7 +430,7 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--text3);
-      margin-top: 100px;
+      margin-top: 40px;
     }
 
     /* Interactive Stamp Trail Styles */
@@ -533,6 +534,7 @@
     .marquee {
 
       overflow: hidden;
+      max-height: 100px;
 
       border-top:
         1px
@@ -545,7 +547,7 @@
         var(--line-dark);
 
       padding:
-        18px 0;
+        0px 0;
 
     }
 
@@ -555,6 +557,8 @@
       display: flex;
 
       width: max-content;
+      heigh: 100px;
+    
 
       animation:
         marquee
@@ -567,7 +571,7 @@
 
     .marquee-text {
 
-      font-family: volina;
+      font-family: hanken grotesk;
         var(--display-font);
 
       font-size:
@@ -577,11 +581,12 @@
           70px
         );
 
-      font-style: italic;
+      font-style: regular;
 
       font-weight: 400;
 
       white-space: nowrap;
+      max-height: 100px;
 
     }
 
@@ -695,8 +700,8 @@
     }
 
     .accent-font {
-     font-family: "volina", sans-serif;
-     font-weight: 400;
+     font-family: "hanken grotesk", sans-serif;
+     font-weight: 600;
      font-style: normal;
       text-transform: none;
       font-size: 1.05em;
@@ -1287,7 +1292,15 @@
 
   <nav>
     <div class="nav-inner">
-      <a class="nav-name" href="#">Federica Campolongo</a>
+
+
+      
+      <a class="nav-name" href="#"><img src="https://raw.githubusercontent.com/federicacampolongo/federicacampolongo.github.io/6b04a606fbc16ca7bf023ed578318cf9e23d25d1/images/Icona_FC.svg" width="40px" alt="FC icon"></a>
+
+
+
+
+      
       <div class="nav-center">
         <div class="nav-links">
           <a href="#about" onclick="scrollTo('about')" data-text="About">About</a>
@@ -1318,12 +1331,21 @@
   </div>
 
   <!-- HERO -->
-  <section class="hero reveal">
+
+  <!---- <section class="hero reveal"><img src="https://raw.githubusercontent.com/federicacampolongo/federicacampolongo.github.io/c48c77e858242cee2f391457c64c5852f1a3c3b6/images/Federica%20Campolongo.svg">
     <div class="hero-title-wrap">
-      <h1 class="hero-line reveal">Federica Campolongo</h1>
-      <p class="hero-sub reveal">Visual Designer</p>
+<p class="hero-sub reveal">Visual Designer</p>
     </div>
-  </section>
+  </section> --->
+
+ <section> <body style="margin-left: 0; margin-right: 0; padding-top: 60px;">
+  <img 
+    src="https://github.com/federicacampolongo/federicacampolongo.github.io/blob/main/images/gif_iniziale.gif?raw=true" 
+    alt=""
+    style="width: 100vw; height: 60vw; object-fit: cover; display: block;"
+  >
+</body>
+   </section>
   
 
   
@@ -1338,85 +1360,9 @@
     <div class="marquee-track">
 
 
-      <div class="marquee-text">
-
-        Branding
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-        Editorial Design
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-        Art Direction
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-        Visual Identity
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-        Photo Editing
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-       Social Media Content
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-
-        Branding
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-        Editorial Design
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-        Art Direction
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-        Visual Identity
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-        Photo Editing
-
-        <span class="marquee-dot">
-          ●
-        </span>
-
-             Social Media Content
-
-        <span class="marquee-dot">
-          ●
-        </span>
+     <img src="https://raw.githubusercontent.com/federicacampolongo/federicacampolongo.github.io/71c2e573291110b62fb72c099f35321359eda370/images/marquee.svg" height="100px" alt="marquee">
 
       </div>
-
-
-    </div>
 
 
   </section>
@@ -1430,31 +1376,12 @@
   
   
 
-  <!-- ABOUT -->
-  <section class="section reveal" id="about">
-    <div class="section-header">
-      <span class="s-label">About</span>
-      <span class="s-num">01</span>
-    </div>
-    <div class="about-grid">
-      <div class="about-intro">
-        
-        <div class="about-text">
-          My name is <span class="accent-font hover-trigger">Federica</span> . I am a visual designer from <span
-            class="accent-font">Italy</span>, where landscape and culture shape my visual language; I translate ideas
-          into clear, expressive visuals, with a particular strength in building <span
-            class="accent-font">identities</span> and crafting communication that feels both <span
-            class="accent-font">intentional</span> and <span class="accent-font">human</span>.
-        </div>
-      </div>
-    </div>
-  </section>
-
+  
   <!-- PROJECTS -->
   <section class="section reveal" id="projects">
     <div class="section-header">
       <span class="s-label">Selected projects</span>
-      <span class="s-num">02</span>
+      <span class="s-num">01</span>
     </div>
     
     
@@ -1742,48 +1669,40 @@
       
       
 
-      <!-- TEMPORARILY COMMENTED OUT - Placeholder cards without images. Uncomment to restore.
-      <div class="card card-c8 reveal" data-cat="printing"
-        onclick="window.location.href='Pagine%20progetto/la_rotonda_e_quadrata.html'">
-        <div class="card-bg" style="background: #2a2420;">
-          [Placeholder until images are added]
-        </div>
-        <div class="card-overlay">
-          <div class="card-top">
-            <span class="card-num">10</span>
-          </div>
-          <div class="card-bottom">
-            <div class="card-name">La rotonda è quadrata</div>
-            <div class="card-type">Printing · 2025</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-c9 reveal" data-cat="printing"
-        onclick="window.location.href='Pagine%20progetto/vademecum.html'">
-        <div class="card-bg" style="background: #1c2028;">
-          [Placeholder until images are added]
-        </div>
-        <div class="card-overlay">
-          <div class="card-top">
-            <span class="card-num">11</span>
-          </div>
-          <div class="card-bottom">
-            <div class="card-name">Vademecum</div>
-            <div class="card-type">Printing · 2025</div>
-          </div>
-        </div>
-      </div>
-      END TEMPORARILY COMMENTED OUT -->
-
     </div>
   </section>
+
+
+
+
+<!-- ABOUT -->
+  <section class="section reveal" id="about">
+    <div class="section-header">
+      <span class="s-label">About</span>
+      <span class="s-num">03</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-intro">
+        
+        <div class="about-text">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  
 
   <!-- RESUME -->
   <section class="section reveal" id="skills">
     <div class="section-header">
       <span class="s-label">RESUME</span>
-      <span class="s-num">03</span>
+      <span class="s-num">04</span>
     </div>
     <div class="about-details-grid">
       <div>
@@ -1863,7 +1782,7 @@
     </div>
     <div class="contact-grid">
       <div class="contact-heading">
-        Let's start <br>your new<br> <span class='accent-font hover-trigger' > Project.</span>
+        Let's start <br>your new<br> <img src="https://raw.githubusercontent.com/federicacampolongo/federicacampolongo.github.io/04c055b7dbdb05a8bc2dbe5a49621322a0357409/images/Project.svg" style="max-width: 250px; height: auto;">
       </div>
       
       
@@ -1977,11 +1896,11 @@
 
         const wordsArray = [
           "My", "name", "is", "<span class='accent-font hover-trigger'>Federica</span>,",
-          "a", "visual", "designer", "from", "<span class='accent-font'>Italy</span>.",
+          "a", "visual", "designer", "from", "<span class='accent-font hover-trigger'>Italy</span>.",
           "My", "work", "esplores", "the", "connection", "between", "concept,", "typography,",
           "imagery", "and", "identity", "transforming", "ideas,", "into", "distinctive",
         
-          "<span class='accent-font'>visual systems</span>", "that", "communicate",
+          "<span class='accent-font hover-trigger'>visual systems</span>", "that", "communicate",
           "with", "clarity", "and", "personality."
         ];
 
