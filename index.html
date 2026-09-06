@@ -224,7 +224,6 @@
       height: 100%;
       display: flex;
       align-items: center;
-      transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
     }
 
     .nav-links a::before {
@@ -234,6 +233,8 @@
     }
 
     .nav-links a::after {
+      font-variation-settings: "wght" 1000;
+  
       top: 100%;
       color: var(--text);
       transform: translateY(0);
@@ -252,6 +253,29 @@
       align-items: center;
       gap: 16px;
     }
+
+
+
+    .desktop-gif {
+    display: block;
+}
+
+.mobile-gif {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop-gif {
+        display: none;
+    }
+
+    .mobile-gif {
+        display: block;
+    }
+}
+
+
+    
 
     /* ── BURGER MENU ── */
     .burger-btn {
@@ -324,24 +348,7 @@
       transition: opacity 0.3s;
     }
 
-    .nav-contact-btn {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text);
-      text-decoration: none;
-      border: 0.5px solid var(--border2);
-      padding: 9px 20px;
-      border-radius: 100px;
-      transition: background 0.18s, color 0.18s;
-    }
-
-    .nav-contact-btn:hover {
-      background: var(--text);
-      color: var(--bg);
-    }
+    
 
     /* ── DARK MODE PALLINO ── */
     .dm-btn {
@@ -432,46 +439,7 @@
       margin-top: 40px;
     }
 
-    /* Interactive Stamp Trail Styles */
-    .hero-stamp {
-      position: absolute;
-      width: clamp(100px, 12vw, 150px);
-      aspect-ratio: 3/4;
-      background: var(--bg2);
-      border: 0.5px solid var(--border);
-      padding: 6px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-      pointer-events: none;
-      z-index: 1;
-      animation: stampFade 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-      transform-origin: center center;
-      border-radius: 4px;
-    }
     
-    .hero-stamp img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 2px;
-    }
-    
-    @keyframes stampFade {
-      0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.6) rotate(var(--r));
-      }
-      15% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1) rotate(var(--r));
-      }
-      80% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.95) rotate(var(--r)) translateY(20px);
-      }
-    }
 
     .hero-footer {
       display: grid;
@@ -510,7 +478,8 @@
     }
 
     .s-label {
-      font-size: 13px;
+
+      font-size: 15px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--text3);
@@ -680,9 +649,9 @@
 
     .about-text {
       font-size: clamp(32px, 4.5vw, 64px);
-      font-weight: 200;
-      line-height: 1.3;
-      color: var(--text);
+      font-weight: 100;
+      line-height: 1.36;
+      color: #BFBFBA;
       max-width: 100%;
       text-align: left;
     }
@@ -710,7 +679,7 @@
     }
 
     .about-text em {
-      font-style: italic;
+    
     }
 
     .about-details {
@@ -857,7 +826,7 @@
 
     @media (hover: hover) {
       .card:hover .card-bg {
-        filter: blur(8px);
+        filter: blur(2px);
         transform: scale(1.04);
       }
     }
@@ -1067,9 +1036,7 @@
       transition: padding-left 0.18s;
     }
 
-    .contact-link:hover {
-      padding-left: 10px;
-    }
+   
 
     .cl-label {
       font-size: 12px;
@@ -1274,6 +1241,32 @@
 
     /* ── CUSTOM CURSOR ── */
 
+
+/* ── Icone Social ── */
+
+    footer {
+    padding: 30px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-icons a {
+    color: #1d1d1d;
+    font-size: 24px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+   
+}
+
     
   </style>
 
@@ -1282,6 +1275,9 @@
 
 
 <link rel="stylesheet" href="https://use.typekit.net/gul5tsa.css">
+
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
@@ -1305,10 +1301,13 @@
           <a href="#projects" onclick="scrollTo('projects')" data-text="Projects">Projects</a>
           
           <a href="#skills" onclick="scrollTo('skills')" data-text="Resume">Resume</a>
+
+          <a class="nav-contact-btn" href="#contact" onclick="scrollTo('contact')" data-text="contact">Contact</a>
+          
         </div>
       </div>
       <div class="nav-right">
-        <a class="nav-contact-btn" href="#contact" onclick="scrollTo('contact')" data-text="contact">Contact</a>
+      
         <div class="dm-btn" onclick="toggleDark()" title="Toggle dark mode"></div>
         <button class="burger-btn" onclick="toggleMenu()" aria-label="Menu">
           <div class="burger-line"></div>
@@ -1336,11 +1335,12 @@
   </section> --->
 
  <section> <body style="margin-left: 0; margin-right: 0; padding-top: 70px;">
-  <img 
-    src="https://github.com/federicacampolongo/federicacampolongo.github.io/blob/main/images/gif_iniziale.gif?raw=true" 
-    alt=""
-    style="width: 100vw; height: 60vw; object-fit: cover; display: block;"
-  >
+  <img src="https://github.com/federicacampolongo/federicacampolongo.github.io/blob/main/images/gif_iniziale.gif?raw=true" 
+    class="gif desktop-gif"
+    alt="welcome"
+    style="width: 100vw; height: 60vw; object-fit: cover; display: block;" >
+
+   <img src="https://github.com/federicacampolongo/federicacampolongo.github.io/blob/main/images/header_cell.gif?raw=true" class="gif mobile-gif" alt="welcome">
 </body>
    </section>
   
@@ -1378,7 +1378,7 @@
   <section class="section reveal" id="projects">
     <div class="section-header">
       <span class="s-label">Selected projects</span>
-      <span class="s-num">01</span>
+      <span class="s-num"></span>
     </div>
     
     
@@ -1673,11 +1673,12 @@
 
 
 <!-- ABOUT -->
-  <section class="section reveal" id="about">
+  <section style="background-color: #393A31;" class="section reveal" id="about">
     <div class="section-header">
       <span class="s-label">About</span>
-      <span class="s-num">03</span>
+      <span class="s-num"></span>
     </div>
+    
     <div class="about-grid">
       <div class="about-intro">
         
@@ -1699,19 +1700,10 @@
   <section class="section reveal" id="skills">
     <div class="section-header">
       <span class="s-label">RESUME</span>
-      <span class="s-num">04</span>
+      <span class="s-num"></span>
     </div>
     <div class="about-details-grid">
-      <div>
-        <div class="detail-title">Tools</div>
-        <div class="skills-list">
-          <span class="skill">Illustrator</span><span class="skill">Photoshop</span>
-          <span class="skill">InDesign</span><span class="skill">Figma</span>
-          <span class="skill">After Effects</span><span class="skill">Premiere</span>
-          <span class="skill">Da Vinci Resolve</span><span class="skill">WordPress</span>
-          <span class="skill">Shopify</span>
-        </div>
-      </div>
+      
       <div>
         <div class="detail-title">Work Experience</div>
         <div class="exp-item">
@@ -1724,7 +1716,7 @@
           <div class="exp-when">Apr 2024 — May 2024</div>
         </div>
         <div class="exp-item">
-          <div class="exp-role">Graphic Designer & Video Editor· <a href="https://www.collegiumphilarmonicum.it/" target="_blank"
+          <div class="exp-role">Graphic Designer & Video Editor · <a href="https://www.collegiumphilarmonicum.it/" target="_blank"
               style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--border2);">Orchestra Collegium Philarmonicum</a></div>
           <div class="exp-when">2022</div>
         </div>
@@ -1746,9 +1738,8 @@
           <div class="exp-where">BA / Visual Design</div>
           <div class="exp-when">Grade 110/110 cum laude</div>
         </div>
-        
-        <br>
-        
+         </div>
+      
         <div>
         <div class="detail-title">Languages</div>
         <div class="exp-item">
@@ -1768,22 +1759,23 @@
         
       </div>
       </div>
-    </div>
+  
   </section>
 
   <!-- CONTACT -->
   <section class="section reveal" id="contact">
     <div class="section-header">
       <span class="s-label">Contact</span>
-      <span class="s-num">04</span>
+      <span class="s-num"></span>
     </div>
-    <div class="contact-grid">
+    
       <div class="contact-heading">
-        Let's start <br>your new<br> <img src="https://raw.githubusercontent.com/federicacampolongo/federicacampolongo.github.io/04c055b7dbdb05a8bc2dbe5a49621322a0357409/images/Project.svg" style="max-width: 250px; height: auto;">
+        Let's start your new    <br><img src="https://raw.githubusercontent.com/federicacampolongo/federicacampolongo.github.io/04c055b7dbdb05a8bc2dbe5a49621322a0357409/images/Project.svg" style="max-width: 250px; height: auto;">
       </div>
       
-      
-      <div class="contact-links">
+    <br>
+    
+     <div class="contact-links">
         <a class="contact-link" href="mailto:federicacgraphics@gmail.com">
           <span class="cl-label">Email</span>
           <span class="cl-value">federicacgraphics@gmail.com</span>
@@ -1797,9 +1789,30 @@
           <span class="cl-value">Naples, Italy</span>
         </div>
       </div>
+  
+
+    <br>  <br>  <br>
+
+
+     <div class="social-icons">
+        <a href="https://www.instagram.com/federicacampolongo_gd/" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.behance.net/federiccampolo" target="_blank" aria-label="Behance">
+            <i class="fa-brands fa-behance"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/federica-campolongo-gd/" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+       
     </div>
+
     
-    <br>  <br>
+    
+    <br> 
         <a href="#top" class="back-to-top">↑</a>
 
   </section>
@@ -1892,10 +1905,10 @@
         // I will redefine the innerHTML with spans for every word.
 
         const wordsArray = [
-          "My", "name", "is", "<span class='accent-font hover-trigger'>Federica</span>,",
+          "Hello,", "I'm", "<span class='accent-font hover-trigger'>Federica</span>,",
           "a", "visual", "designer", "from", "<span class='accent-font hover-trigger'>Italy</span>.",
           "My", "work", "esplores", "the", "connection", "between", "concept,", "typography,",
-          "imagery", "and", "identity", "transforming", "ideas,", "into", "distinctive",
+          "imagery", "and", "identity", "transforming", "ideas", "into", "distinctive",
         
           "<span class='accent-font hover-trigger'>visual systems</span>", "that", "communicate",
           "with", "clarity", "and", "personality."
@@ -1947,7 +1960,7 @@
       });
 
       const updateInteractiveListeners = () => {
-        const interactiveElements = document.querySelectorAll('a, button, .dm-btn, .hover-trigger, .card, .contact-link, .filter-btn, .cv-btn');
+        const interactiveElements = document.querySelectorAll('a, button, .dm-btn, .hover-trigger, .card, .filter-btn, .cv-btn');
         interactiveElements.forEach(el => {
           if (!el.dataset.cursorBound) {
             el.addEventListener('mouseenter', () => mainCursor.classList.add('active'));
